@@ -13,11 +13,17 @@ Este proyecto es una aplicación web en la que los usuarios pueden gestionar su 
 ## Características
 
 Autenticación de usuario: Los usuarios pueden registrarse, iniciar sesión y ver su perfil.
+
 Gestión de perfil: Los usuarios pueden editar su perfil y avatar.
+
 Gestión de tarjetas: Los usuarios pueden agregar, eliminar y dar "like" a sus tarjetas y a las de otros usuarios.
+
 Validación de formularios: Validación en los formularios de registro y edición de perfil.
+
 Mensajes de error y éxito: Ventanas modales que notifican al usuario sobre el estado de sus acciones.
+
 Pantalla de inicio: Pantalla con las opciones de login y registro, con mensajes modales para informar sobre errores o éxito.
+
 
 ![alt text](<src/images/Captura de pantalla 2025-02-17 123248.png>)
 ![alt text](<src/images/Captura de pantalla 2025-02-12 020402.png>)
@@ -25,15 +31,18 @@ Pantalla de inicio: Pantalla con las opciones de login y registro, con mensajes 
 
 ## Herramientas y Tecnologías
 
-Frontend: React, HTML, CSS, JavaScript
-Backend: Uso de dos APIs (para autenticación y gestión de tarjetas)
-Gestión de estado: Manejo de estado en React
-Diseño: Figma
-Desarrollo y pruebas: Git, Postman, Vite
+**Frontend:** React, HTML, CSS, JavaScript
+**Backend:** Uso de dos APIs (para autenticación y gestión de tarjetas)
+**Gestión de estado:** Manejo de estado en React
+**Diseño:** Figma
+**Desarrollo y pruebas:** Git, Postman, Vite
 
 ### Instalación
 
-Clona este repositorio: git@github.com:LuisaMSegur/web_project_around_auth.git
-Navega al directorio del proyecto: cd tu-repositorio
-Instala las dependencias: npm install
-Inicia la aplicación: npm run dev
+**Clona este repositorio:** git@github.com:LuisaMSegur/web_project_around_auth.git
+
+**Navega al directorio del proyecto:** cd tu-repositorio
+
+**Instala las dependencias:** npm install
+
+**Inicia la aplicación:** npm run dev
