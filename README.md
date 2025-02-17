@@ -32,9 +32,13 @@ Pantalla de inicio: Pantalla con las opciones de login y registro, con mensajes 
 ## Herramientas y Tecnologías
 
 **Frontend:** React, HTML, CSS, JavaScript
+
 **Backend:** Uso de dos APIs (para autenticación y gestión de tarjetas)
+
 **Gestión de estado:** Manejo de estado en React
+
 **Diseño:** Figma
+
 **Desarrollo y pruebas:** Git, Postman, Vite
 
 ### Instalación
