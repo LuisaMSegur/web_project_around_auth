@@ -14,7 +14,6 @@ export async function register(email, password) {
     }
 
     const data = await response.json();
-    console.log(data);
     return data.token;
   } catch (err) {
     console.error(`Error: ${err}`);
@@ -39,7 +38,6 @@ export async function authorize(email, password) {
     throw new Error(errorData.message || "Error en la autorización");
   }
   const {token} = await response.json();
-  console.log(token);
   localStorage.setItem("jwt", token);
   return token;
 } catch (err) {
