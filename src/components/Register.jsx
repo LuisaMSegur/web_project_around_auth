@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import * as auth from "../utils/auth.js";
 import InfoTooltip from "./InfoTooltip.jsx";
 
-export default function Register() {
+export default function Register({handleRegister}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,6 +16,7 @@ export default function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
     setIsSubmitting(true);
+    handleRegister();
 
     try {
       await auth.register(email, password);

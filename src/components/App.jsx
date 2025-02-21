@@ -89,6 +89,22 @@ function App() {
     navigate("/signin");
   }
 
+  async function handleRegister(email, password) {
+    try {
+      const userData = await auth.register(email, password);
+      console.log("Usuario registrado:", userData);
+  
+      const token = await auth.authorize(email, password);
+      if (token) {
+        console.log("Usuario autenticado correctamente");
+      } else {
+        console.error("No se pudo autenticar automáticamente");
+      }
+    } catch (err) {
+      console.error("Error en el registro:", err);
+    }
+  }
+
   //funciones para editar perfil, avatar y agregar cartas
   const handleUpdateUser = ({name, about}) => {
     api.editUser({name, about})
@@ -165,7 +181,7 @@ return (
       <Header handleLogout={handleLogout} email={email}/>
       <Routes>
         <Route path="/signin" element={isLoggedIn ? <Navigate to="/" /> : <Login handleLogin={handleLogin} setUserEmail={setEmail}/>} />
-        <Route path="/signup" element={<Register />} />
+        <Route path="/signup" element={<Register handleRegister={handleRegister} />} />
         <Route
   path="/"
   element={

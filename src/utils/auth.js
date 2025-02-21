@@ -2,24 +2,30 @@ const BASE_URL = "https://se-register-api.en.tripleten-services.com/v1";
 
 export async function register(email, password) {
   try {
+    console.log("Intentando registrar usuario con:", email, password);
+
     const response = await fetch(`${BASE_URL}/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
     });
 
+    console.log("Respuesta del servidor:", response);
+
+    const data = await response.json(); 
+    
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || "Error en el registro");
+      console.error("Error en el registro:", data);
+      throw new Error(data.message || "Error en el registro");
     }
 
-    const data = await response.json();
-    return data.token;
+    console.log("Usuario registrado exitosamente:", data);
+    return data;
   } catch (err) {
-    console.error(`Error: ${err}`);
+    console.error("Error en register():", err);
     throw err; 
   }
-};
+}
 
 
 export async function authorize(email, password) {
